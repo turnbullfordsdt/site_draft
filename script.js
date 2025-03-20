@@ -19,7 +19,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
   const filePath = "stuff.txt";
   const commitMessage = "Update file via API";
 
-  fetch(`https://api.github.com/repos/${owner}/${repo}/${filePath}`, {
+  fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${filePath}`, {
     method: "GET",
     headers: {
       Authorization: `token ${token}`,
@@ -30,7 +30,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     .then(fileData => {
       const sha = fileData.sha;
 
-      return fetch(`https://api.github.com/repos/${owner}/${repo}/${filePath}`, {
+      return fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${filePath}`, {
         method: "PUT",
         headers: {
           Authorization: `token ${token}`,
