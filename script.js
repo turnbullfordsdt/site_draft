@@ -13,7 +13,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 
   const newContent = btoa(JSON.stringify(contactInfo)); // Convert contact info to Base64
 
-  const token = "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";
+  const token = "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";
   const repo = "files_to_access_repo";
   const owner = "turnbullfordsdt";
   const filePath = "stuff.txt";
