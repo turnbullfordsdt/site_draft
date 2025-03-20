@@ -30,7 +30,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     .then(fileData => {
       const sha = fileData.sha;
 
-      return fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${filePath}`, {
+      return fetch(`https://api.github.com/repos/${owner}/${repo}/${filePath}`, {
         method: "PUT",
         headers: {
           Authorization: `token ${token}`,
