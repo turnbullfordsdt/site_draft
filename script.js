@@ -19,7 +19,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
   const filePath = "stuff.txt";
   const commitMessage = "Update file via API";
 
-  fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${filePath}`, {
+  fetch(`https://api.github.com/repos/${owner}/${repo}/${filePath}`, {
     method: "GET",
     headers: {
       Authorization: `token ${token}`,
